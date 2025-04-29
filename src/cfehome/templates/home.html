@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} home page {% endblock title%}
+
+{% block content %} 
+        <h1>{{page_title}} </h1>
+        <p>{{request.user}} {{request.method}} </p>
+    
+
+        {% if request.user.is_authenticated %} your are a user is loging
+        {% else %} your are not loging {% endif %}
+        {% include "nav.html" %}
+       page visits:-  {{ queryset }} \n
+       total visit: {{ total_visit_count }}\n
+       percent:- {{ percent }}
+  
+       {% endblock content %} 
