@@ -9,8 +9,13 @@
         {% if request.user.is_authenticated %} your are a user is loging
         {% else %} your are not loging {% endif %}
         {% include "nav.html" %}
-       page visits:-  {{ queryset }} \n
-       total visit: {{ total_visit_count }}\n
-       percent:- {{ percent }}
+<p> page visits:-  {{ queryset }}</p>
+<p>total visit: {{ total_visit_count }}</p>
+<p>percent:- {{ percent }}</p>
+<p></p>
+        
+       
+       
+       
   
        {% endblock content %} 
